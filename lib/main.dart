@@ -1,4 +1,5 @@
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,13 +15,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-            child: IconButton(onPressed: (){},
+          child: IconButton(
+            onPressed: () {},
             icon: Icon(Icons.add),
             color: Colors.white,
           ),
           backgroundColor: Colors.blue,
         ),
-
 
         appBar: AppBar(
           title: Text('Facebook'),
