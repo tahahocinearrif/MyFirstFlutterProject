@@ -14,14 +14,14 @@ class MyApp extends StatelessWidget {
 
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.add),
-            color: Colors.white,
+                    onPressed: () {},
+                    backgroundColor: Colors.blue,
+                    child: Icon(
+                            Icons.add,
+                            color: Colors.white,
+                              ),
           ),
-          backgroundColor: Colors.blue,
-        ),
+        
 
         appBar: AppBar(
           title: Text('Facebook'),
@@ -46,22 +46,28 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Container(
-            child: Text(
-              'Hello, Facebook!',
-              maxLines: 2,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            alignment: Alignment.center,
-            height: 200,
-            width: 200,
-            margin: EdgeInsets.all(80),
-            padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              border: Border.all(color: Colors.blue, width: 2),
-              borderRadius: BorderRadius.circular(16),
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                height: 200,
+                width: 200,
+                margin: EdgeInsets.all(80),
+                padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  border: Border.all(color: Colors.blue, width: 2),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              Text(
+                "Hello",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.safety_check)),
+            ],
           ),
         ),
       ),
