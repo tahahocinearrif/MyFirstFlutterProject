@@ -45,32 +45,72 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                height: 200,
-                width: 200,
-                margin: EdgeInsets.all(80),
-                padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  border: Border.all(color: Colors.blue, width: 2),
-                  borderRadius: BorderRadius.circular(16),
+        body:  SingleChildScrollView(
+          padding: EdgeInsets.fromLTRB(50,0 , 0,0 ),
+          child :Container(
+            color : Colors.grey,
+            child: Column(
+              
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+            
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 7, 255, 48),
+                    border: Border.all(color: Colors.blue, width: 2),
+                    
+                  ),
+                  height: 140,
+                  width: 200,
+                  child: IconButton(onPressed: () {}, icon: Icon(Icons.favorite)
+                  
+                  ),
                 ),
-              ),
-              Text(
-                "Hello",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.safety_check)),
-            ],
+                SizedBox(height: 280),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 7, 32, 255),
+                    border: Border.all(color: Colors.blue, width: 2),
+                    shape :BoxShape.circle,
+                  ),
+                  height: 100,
+                  width: 100,
+                  child: IconButton(onPressed: () {}, icon: Icon(Icons.favorite)
+                  
+                  ),
+                ),
+                SizedBox(height: 280),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 7, 123),
+                    border: Border.all(color: Colors.blue, width: 2),
+                    shape :BoxShape.circle,
+                  ),
+                  height: 100,
+                  width: 100,
+                  child: IconButton(onPressed: () {}, icon: Icon(Icons.favorite)
+                  
+                  ),
+                ),
+                SizedBox(height: 280),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 7, 255, 48),
+                    border: Border.all(color: Colors.blue, width: 2),
+                    shape :BoxShape.circle,
+                  ),
+                  height: 100,
+                  width: 100,
+                  child: IconButton(onPressed: () {}, icon: Icon(Icons.favorite)
+                  
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-    );
+        ),
+      );
   }
 }
