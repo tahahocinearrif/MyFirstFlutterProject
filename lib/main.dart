@@ -37,56 +37,70 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Container(
-          height: 300,
-          color: Colors.blueGrey,
-          child: Row(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 116,
-                  width: 116,
-                  color: Colors.amber,
-                  child: Text(
-                    "C4a.shop",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      fontWeight: FontWeight.w700,
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 9),
+                width: 350,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(60),
+                ),
+                child: TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    hintText: "Email :",
+                    hintStyle: TextStyle(fontSize: 19),
+                    border: InputBorder.none,
+                    prefixIcon: Icon(color: Colors.purple, Icons.person),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 9),
+                width: 350,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(60),
+                ),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "Password :",
+                    hintStyle: TextStyle(fontSize: 19),
+                    border: InputBorder.none,
+                    prefixIcon: Icon(color: Colors.purple, Icons.lock),
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: Icon(color: Colors.purple, Icons.visibility),
                     ),
                   ),
                 ),
               ),
-              Expanded(
-                flex:2,
-                child: Container(
-                  height: 116,
-                  width: 116,
-                  color: Colors.blue,
-                  child: Text(
-                    "C4a.shop",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      fontWeight: FontWeight.w700,
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.purple),
+                  padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(horizontal: 99, vertical: 15),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 116,
-                  width: 116,
-                  color: Colors.red,
-                  child: Text(
-                    "C4a.shop",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      fontWeight: FontWeight.w700,
-                    ),
+                child: Text(
+                  "Login ",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
