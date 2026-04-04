@@ -85,12 +85,12 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  backgroundColor: MaterialStateProperty.all(Colors.purple),
-                  padding: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(Colors.white),
+                  backgroundColor: WidgetStateProperty.all(Colors.purple),
+                  padding: WidgetStateProperty.all(
                     EdgeInsets.symmetric(horizontal: 99, vertical: 15),
                   ),
-                  shape: MaterialStateProperty.all(
+                  shape: WidgetStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
